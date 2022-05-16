@@ -19,6 +19,10 @@ app.get("/", (req:any, res:any) => {
   res.status(200).send("hello world!");
 });
 
+app.get("/env", (req:any, res:any) => {
+  res.status(200).send(process.env.TEST1);
+});
+
 app.get("/ping", (req:any, res:any) => {
   res.status(200).send("pong");
 });
